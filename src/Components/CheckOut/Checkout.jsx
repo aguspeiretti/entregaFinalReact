@@ -3,6 +3,7 @@ import { useContext } from 'react'
 import { CartContext } from '../../context/CartContext'
 import {collection,updateDoc,doc, addDoc , getFirestore } from "firebase/firestore"
 import "./Checkout.css"
+import Cart from '../Cart/Cart'
 
 const Checkout = () => {
     const cartContext = useContext(CartContext)
@@ -127,7 +128,9 @@ const Checkout = () => {
      )
     }
   </div>
-     
+     <div className='cartVisible'>
+      <Cart />
+     </div>
 
     
   </>

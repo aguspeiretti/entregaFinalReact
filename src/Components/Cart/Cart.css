@@ -113,7 +113,7 @@
 }
 @media (max-width: 991px) {
   .carritoPrincipal {
-    width: 100vw;
+    width: 90vw;
     height: 100vh;
     display: flex;
     justify-content: end;
@@ -124,7 +124,7 @@
     overflow: hidden;
   }
   .carrito {
-    width: 100vw;
+    width: 90vw;
     height: 100vh;
     background-color: white;
     z-index: 100;

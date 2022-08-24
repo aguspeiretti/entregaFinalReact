@@ -64,3 +64,11 @@
   background-color: #e8b0da;
   color: #ffffff;
 }
+@media (max-width: 991px) {
+  .formContainer {
+    margin-left: 0px;
+  }
+  .cartVisible {
+    display: none;
+  }
+}

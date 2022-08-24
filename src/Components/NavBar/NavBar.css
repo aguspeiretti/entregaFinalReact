@@ -67,7 +67,7 @@
     padding-left: 40px;
     padding-top: 10px;
     font-size: 25px;
-    z-index: 100;
+    z-index: 1000;
   }
   .links-mobile {
     position: absolute;
@@ -83,6 +83,7 @@
     align-items: center;
     justify-content: space-evenly;
     transition: ease-in-out 0.5s;
+    z-index: 900;
   }
   .links-mobile-abierta {
     position: absolute;
@@ -98,6 +99,7 @@
     align-items: center;
     justify-content: space-evenly;
     transition: ease-in-out 0.5s;
+    z-index: 900;
   }
   .links-mobile a {
     color: white;

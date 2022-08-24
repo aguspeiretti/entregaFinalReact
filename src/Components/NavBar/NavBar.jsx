@@ -10,7 +10,7 @@ export default function NavBar() {
 
     const cartContext = useContext(CartContext)
     const { mostrar , mCarrito, cerrar } = cartContext
-    const [toggle , setToggle]=useState(false)
+    const [toggle , setToggle]=useState(true)
   
     const menu =()=>{
       setToggle(!toggle)

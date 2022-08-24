@@ -56,3 +56,33 @@
 .imagenFotos img:hover {
   filter: drop-shadow(0 0 0.9em #e8b0da);
 }
+@media (max-width: 991px) {
+  .contenedorColegios {
+    background-image: url(../../img/fondo3.png);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .colegios {
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .colegios div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 30px;
+  }
+  .colegios img {
+    height: 100px;
+  }
+  .colegios li {
+    padding-top: 30px;
+  }
+}

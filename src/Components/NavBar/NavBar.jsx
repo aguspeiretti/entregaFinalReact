@@ -10,7 +10,11 @@ export default function NavBar() {
 
     const cartContext = useContext(CartContext)
     const { mostrar , mCarrito, cerrar } = cartContext
+    const [toggle , setToggle]=useState(false)
   
+    const menu =()=>{
+      setToggle(!toggle)
+    }
 
   return (
     <>
@@ -37,9 +41,28 @@ export default function NavBar() {
         </div>
 
         </div>
-        
     </div>
-    </>
+    <div className= 'list-mobile' >
+          
+          <i onClick={menu} class="fa-solid fa-bars barrita"></i>
+  
+          <ul className={toggle ? 'links-mobile' : 'links-mobile-abierta'} >
+              <Link onClick={menu} to="/"> <li className='link'>Home</li> </Link>
+              <Link onClick={menu} to="/Nosotros"> <li className='link'>Nosotros</li> </Link>
+              <Link onClick={menu} to="/Colegios"> <li className='link'>Colegios</li> </Link>
+              <Link onClick={menu} to="/Jardines/BeHappy"> <li className='link'>Jardines</li> </Link>
+          </ul>
+  
+          <div className='icono'>
+  
+          <div  onClick={mostrar} id='pop' className='circulo'>
+             <CartWidget />
+          </div>
+  
+          </div>
+  
+    </div>
+  </>
    
   )
 }

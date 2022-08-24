@@ -13,3 +13,16 @@
 .ItemList img {
   margin-right: 15px;
 }
+@media (max-width: 991px) {
+  .ItemList {
+    width: 100%;
+    height: 100%;
+    background-image: none;
+    background-color: #01093e;
+    flex-direction: column;
+    padding-top: 70px;
+  }
+  .ItemList img {
+    margin-right: 15px;
+  }
+}

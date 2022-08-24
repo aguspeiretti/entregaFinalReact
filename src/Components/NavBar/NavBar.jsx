@@ -44,7 +44,7 @@ export default function NavBar() {
     </div>
     <div className= 'list-mobile' >
           
-          <i onClick={menu} class="fa-solid fa-bars barrita"></i>
+          <i onClick={menu} className="fa-solid fa-bars barrita"></i>
   
           <ul className={toggle ? 'links-mobile' : 'links-mobile-abierta'} >
               <Link onClick={menu} to="/"> <li className='link'>Home</li> </Link>

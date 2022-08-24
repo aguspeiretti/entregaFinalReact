@@ -2,15 +2,17 @@ import React, { useEffect, useState } from 'react'
 import {collection, getDocs , getFirestore } from "firebase/firestore" 
 import { useParams } from 'react-router-dom';
 import ItemList from '../itemList/ItemList';
+import Loader from '../loader/Loader';
 
 export default function ItemListContainer() {
 
     const[products ,setProducts] = useState([])
     const {idCategoria} = useParams()
+    const [loading ,setLoading] = useState(false)
 
     useEffect(() =>{
      
-     
+      setLoading(true)
 
       const db = getFirestore()
       
@@ -37,10 +39,12 @@ export default function ItemListContainer() {
       
       if (idCategoria){
           setProducts(limpios)
+          setLoading(false)
          
 
       }else{
           setProducts(completos)
+          setLoading(false)
          
           
       }
@@ -52,8 +56,14 @@ export default function ItemListContainer() {
 
   },[idCategoria])
 
+  
+  if(loading){
+    return <Loader />
+}else{
+
   return (
 
     <div> <ItemList products={products} /></div>
   )
+}
 }

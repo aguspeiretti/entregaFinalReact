@@ -3,18 +3,20 @@ import ItemDetail from '../ItemDetail/ItemDetail'
 import ".//ItemDetailContainer.css"
 import { useParams } from 'react-router-dom'
 import {collection, getDocs , getFirestore } from "firebase/firestore"
+import Loader from '../loader/Loader'
 
 
 const ItemDetailContainer = () => {
 
   const [items, setItems] = useState([])
   const { idItem } = useParams()
-
+  const [loading, setLoading] = useState(false)
 
  
   useEffect(() =>{
      
-  
+    setLoading(true)
+
 
     const db = getFirestore()
     
@@ -44,11 +46,13 @@ const ItemDetailContainer = () => {
     
     if (idItem){
         setItems(limpios)
-     
+        setLoading(false)
+
 
     }else{
         setItems(completos)
-     
+        setLoading(falsea)
+
         
     }
     
@@ -59,6 +63,10 @@ const ItemDetailContainer = () => {
 
 },[idItem])
 
+if(loading){
+    return <Loader />
+}
+else{
 
 
 return (
@@ -69,6 +77,7 @@ return (
   
 
 )
+}
 }
 
 export default ItemDetailContainer
